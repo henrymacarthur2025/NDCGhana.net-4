@@ -6,7 +6,14 @@ import { Link } from "react-router-dom";
 export function DiasporaHero() {
   return (
     <section className="relative px-4 py-20 sm:px-6 lg:px-8 bg-black overflow-hidden hero-gradient text-white">
-      <div className="absolute inset-0 bg-[url('https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg')] bg-no-repeat bg-center bg-contain opacity-20 transform scale-110"></div>
+      <div className="absolute inset-0 pointer-events-none">
+        <img
+          src="https://i.ibb.co/5hxhmst1/NDC-Globe.png"
+          alt="NDC Globe"
+          className="w-full h-full object-cover object-center opacity-20 transform scale-110"
+          referrerPolicy="no-referrer"
+        />
+      </div>
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
       
       {/* Animated connection lines simulation */}

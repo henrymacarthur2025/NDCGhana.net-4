@@ -13,7 +13,6 @@ import SuggestionModal from "../components/SuggestionModal";
 import MPCarousel from "../components/MPCarousel";
 
 import RotatingHeadline from "../components/RotatingHeadline";
-import ndcHeroImage from "../assets/images/ndc_rally_hero_1781041326992.png";
 
 const FEATURED_PROJECTS = [
   {
@@ -24,7 +23,7 @@ const FEATURED_PROJECTS = [
     location: "Accra Central",
     status: "Ongoing",
     image:
-      "https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80&w=600&h=400",
+      "https://i.ibb.co/4ZQQmzJ5/Accra-Ring-Road-Phase-2.jpg",
   },
   {
     id: 2,
@@ -34,7 +33,7 @@ const FEATURED_PROJECTS = [
     location: "Kumasi Central",
     status: "Completed",
     image:
-      "https://images.unsplash.com/photo-1533423996375-f914415211cf?auto=format&fit=crop&q=80&w=600&h=400",
+      "https://i.ibb.co/CKQJ9q0h/Kumasi-Market-Complex-Expansion.jpg",
   },
   {
     id: 3,
@@ -44,7 +43,7 @@ const FEATURED_PROJECTS = [
     location: "Tamale North",
     status: "Ongoing",
     image:
-      "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=600&h=400",
+      "https://i.ibb.co/W4FsPPPP/Tamale-Central-Hospital-Renovation.jpg",
   },
   {
     id: 4,
@@ -54,7 +53,7 @@ const FEATURED_PROJECTS = [
     location: "Cape Coast Central",
     status: "Completed",
     image:
-      "https://images.unsplash.com/photo-1580582932707-520aed9a5bc7?auto=format&fit=crop&q=80&w=600&h=400",
+      "https://i.ibb.co/vxsFVkz4/Cape-Coast-STEM-School.jpg",
   },
   {
     id: 5,
@@ -64,7 +63,7 @@ const FEATURED_PROJECTS = [
     location: "North Tongu",
     status: "Upcoming",
     image:
-      "https://images.unsplash.com/photo-1545620986-e7e2c90bcbaa?auto=format&fit=crop&q=80&w=600&h=400",
+      "https://i.ibb.co/4wWdSZFg/Volta-River-Community-Water.jpg",
   },
   {
     id: 6,
@@ -74,7 +73,7 @@ const FEATURED_PROJECTS = [
     location: "Klottey-Korle",
     status: "Ongoing",
     image:
-      "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=600&h=400",
+      "https://i.ibb.co/209pXz09/Accra-Youth-Innovation-Hub.jpg",
   },
 ];
 
@@ -88,7 +87,7 @@ export default function Home() {
         {/* Background Image of NDC Rally */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
           <img
-            src={ndcHeroImage}
+            src="https://i.ibb.co/Jj8bYMM4/NDC-Party-Crowd.jpg"
             alt="NDC Rally Ghana"
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -323,7 +322,7 @@ export default function Home() {
                 desc: "Empowering students through literacy and critical thinking across the constituency's public schools.",
                 loc: "Tamale South",
                 pax: 240,
-                img: "https://images.unsplash.com/photo-1546410531-bea5aadcb6ce?auto=format&fit=crop&q=80&w=400&h=250",
+                img: "https://i.ibb.co/wxw7yL2/Esay-Writing-Competition.jpg",
               },
               {
                 title: "Youth Innovation Initiative",
@@ -332,7 +331,7 @@ export default function Home() {
                 desc: "Providing technical skills training and startup support for young constituents aged 18-35.",
                 loc: "North Tongu",
                 pax: 180,
-                img: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=400&h=250",
+                img: "https://i.ibb.co/8g0mkhmc/Youth-Innovation-Initiative.jpg",
               },
               {
                 title: "Photography Exhibition",
@@ -341,7 +340,7 @@ export default function Home() {
                 desc: "Celebrating local culture and talent through a community photography showcase and gallery.",
                 loc: "Klottey-Korle",
                 pax: 95,
-                img: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=400&h=250",
+                img: "https://i.ibb.co/Kj31b6sN/Photography-Exhibition.jpg",
               },
               {
                 title: "Women's Agri-Business Workshop",
@@ -350,7 +349,7 @@ export default function Home() {
                 desc: "Training female farmers in modern agri-business practices to boost income and food security.",
                 loc: "Ellembelle",
                 pax: 320,
-                img: "https://images.unsplash.com/photo-1592652467571-fb8172c72b83?auto=format&fit=crop&q=80&w=400&h=250",
+                img: "https://i.ibb.co/Ldv5DWvb/Women-in-Agriculture.jpg",
               },
             ].map((prog, i) => (
               <div
