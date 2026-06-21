@@ -19,8 +19,8 @@ export function ConstituencyConnect() {
             </div>
             <div className="flex-1 relative">
                <Flag className="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant" />
-               <select className="w-full pl-10 pr-4 py-3 bg-surface border border-outline-variant rounded-[1px] text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary appearance-none">
-                  <option value="" disabled selected>Select Region</option>
+               <select defaultValue="" className="w-full pl-10 pr-4 py-3 bg-surface border border-outline-variant rounded-[1px] text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary appearance-none">
+                  <option value="" disabled>Select Region</option>
                   <option value="greater-accra">Greater Accra</option>
                   <option value="ashanti">Ashanti</option>
                   <option value="volta">Volta</option>
