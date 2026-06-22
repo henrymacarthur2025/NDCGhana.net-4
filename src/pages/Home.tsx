@@ -6,6 +6,9 @@ import {
   Star,
   ExternalLink,
   ArrowRight,
+  ShieldCheck,
+  CheckCircle2,
+  Award,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -13,6 +16,7 @@ import SuggestionModal from "../components/SuggestionModal";
 import MPCarousel from "../components/MPCarousel";
 
 import RotatingHeadline from "../components/RotatingHeadline";
+import DuesPaymentSection from "../components/DuesPaymentSection";
 
 const FEATURED_PROJECTS = [
   {
@@ -415,7 +419,179 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Community Statistics Section */}
+      {/* NDC Membership ID Card Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-surface-white to-surface-bright border-b border-outline-variant/10">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+            {/* Left Column (Branding & Copy) */}
+            <div className="lg:col-span-5 flex flex-col gap-6">
+              <div className="bg-surface-white border border-outline-variant/30 rounded-[1px] p-8 md:p-10 shadow-sm hover:shadow-md transition-shadow">
+                <div className="inline-block px-3 py-1 bg-[#006B3C]/10 border border-[#006B3C]/15 rounded-[1px] text-xs text-[#006B3C] font-semibold uppercase tracking-wider mb-6">
+                  MEMBERSHIP SERVICES
+                </div>
+
+                <h2 className="text-3xl md:text-4xl font-bold text-deep-navy mb-6 leading-tight">
+                  Get Your Official NDC Membership ID Card
+                </h2>
+
+                <p className="text-base text-on-surface-variant leading-relaxed mb-8">
+                  Register for your official NDC Membership ID Card and enjoy
+                  seamless identification across party activities, constituency
+                  events, branch engagements, and national programs.
+                </p>
+
+                <a
+                  href="https://idcards.ghanandc.com/home/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-[#CE1126] hover:bg-opacity-90 text-white font-bold py-3.5 px-6 rounded-[1px] transition-all group w-fit shadow-sm shadow-[#CE1126]/20"
+                >
+                  Get My ID Card
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+
+            {/* Right Column (Premium Membership Card Showcase) */}
+            <div className="lg:col-span-7 w-full flex flex-col items-center">
+              <div className="w-full bg-surface-white border border-outline-variant/30 rounded-2xl md:rounded-[32px] p-6 sm:p-8 lg:p-10 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center">
+                {/* ID Card Wrapper with Perspective Effect */}
+                <div className="w-full max-w-md [perspective:1000px] group/cardContainer">
+                  {/* Premium Digital ID Card */}
+                  <div className="relative aspect-[1.586/1] w-full bg-gradient-to-br from-[#026237] via-[#037A44] to-[#014024] rounded-2xl p-4 md:p-6 text-white shadow-xl overflow-hidden border border-white/20 select-none flex flex-col justify-between transform group-hover/cardContainer:[transform:rotateY(4deg)_rotateX(4deg)_translateY(-2px)] group-hover/cardContainer:shadow-[0_25px_50px_-12px_rgba(0,107,60,0.25)] transition-all duration-500">
+                    {/* Security Guilloche Overlay Effect */}
+                    <div className="absolute inset-0 opacity-[0.06] pointer-events-none mix-blend-overlay">
+                      <div className="absolute inset-[-50%] bg-[radial-gradient(circle_at_center,_#ffffff_0%,_transparent_60%)] animate-pulse" style={{ animationDuration: "12s" }}></div>
+                    </div>
+                    
+                    {/* Sparkle Glow Highlight */}
+                    <div className="absolute top-0 -left-full w-1/2 h-full bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-30 group-hover/cardContainer:animate-[shimmer_1.5s_infinite_linear]"></div>
+
+                    {/* Top Row: Party logos and type */}
+                    <div className="flex justify-between items-start gap-2 relative z-10 w-full">
+                      <div className="flex items-center gap-1.5 md:gap-2">
+                        {/* Custom SVG NDC Umbrella Logo */}
+                        <div className="w-8 h-8 md:w-10 md:h-10 bg-white rounded-full p-1.5 flex items-center justify-center shadow-md">
+                          <svg viewBox="0 0 100 100" className="w-full h-full">
+                            <path d="M 50 20 C 32 20, 18 35, 15 45 C 22 42, 30 42, 35 45 C 40 42, 48 42, 53 45 C 58 42, 66 42, 71 45 C 76 42, 84 42, 85 45 C 82 35, 68 20, 50 20 Z" fill="#006B3C" />
+                            <path d="M 50 20 C 42 20, 36 28, 35 45 C 40 42, 48 42, 53 45 C 50 28, 46 22, 50 20 Z" fill="#CE1126" />
+                            <path d="M 50 20 C 47 20, 44 24, 45 45 C 48 42, 52 42, 53 45 C 52 24, 51 21, 50 20 Z" fill="#ffffff" />
+                            <path d="M 48 45 L 48 78 C 48 81, 52 81, 52 78 L 52 45 Z" fill="#000000" />
+                            <circle cx="50" cy="17" r="2.5" fill="#CE1126" />
+                          </svg>
+                        </div>
+                        <div className="flex flex-col">
+                          <span className="text-[9px] md:text-[11px] font-extrabold tracking-tight leading-3">NATIONAL</span>
+                          <span className="text-[9px] md:text-[11px] font-extrabold tracking-tight leading-3">DEMOCRATIC</span>
+                          <span className="text-[9px] md:text-[11px] font-extrabold tracking-tight leading-3 text-[#fcd116]">CONGRESS</span>
+                        </div>
+                      </div>
+                      
+                      <div className="text-right">
+                        <span className="text-[8px] md:text-[9px] font-mono tracking-wider font-extrabold text-[#fcd116] border border-[#fcd116]/30 px-1.5 py-0.5 rounded-sm bg-[#fcd116]/5 uppercase">
+                          MEMBERSHIP IDENTITY CARD
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Middle Row: Content and Gold Contact Chip */}
+                    <div className="grid grid-cols-12 gap-3 items-center my-1 md:my-2 relative z-10 w-full h-full">
+                      {/* Left Block: Chip and details (Span 8) */}
+                      <div className="col-span-8 flex flex-col justify-between h-full space-y-1.5 md:space-y-3">
+                        {/* Gold Chip element */}
+                        <div className="w-8 h-6 md:w-10 md:h-7.5 bg-gradient-to-br from-[#ffe57f] via-[#ffd54f] to-[#ffb300] rounded-sm p-[1px] shadow border border-[#ffd54f]/40 relative overflow-hidden flex flex-col justify-between">
+                          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_center,_#fff_0%,_transparent_70%)]"></div>
+                          <div className="flex justify-between h-full">
+                            <div className="w-[30%] border-r border-[#ffb300]/50 h-full"></div>
+                            <div className="w-[40%] flex flex-col justify-between h-full">
+                              <div className="h-[25%] border-b border-[#ffb300]/50 w-full"></div>
+                              <div className="h-[25%] border-b border-[#ffb300]/50 w-full"></div>
+                            </div>
+                            <div className="w-[30%] border-l border-[#ffb300]/50 h-full"></div>
+                          </div>
+                        </div>
+
+                        {/* Person details */}
+                        <div className="space-y-0.5 md:space-y-1 text-[9px] md:text-xs font-mono">
+                          <div className="flex gap-1">
+                            <span className="text-white/60 w-16 md:w-20 shrink-0">Name:</span>
+                            <span className="text-white font-bold uppercase tracking-wide truncate">OSAAH HANNET</span>
+                          </div>
+                          <div className="flex gap-1">
+                            <span className="text-white/60 w-16 md:w-20 shrink-0">ID No:</span>
+                            <span className="text-[#fcd116] font-bold">E430410018</span>
+                          </div>
+                          <div className="flex gap-1">
+                            <span className="text-white/60 w-16 md:w-20 shrink-0">Branch:</span>
+                            <span className="text-white/90 truncate">CMB SHED DUMASUA</span>
+                          </div>
+                          <div className="flex gap-1">
+                            <span className="text-white/60 w-16 md:w-20 shrink-0">Constituency:</span>
+                            <span className="text-white/90 truncate">OFFINSO</span>
+                          </div>
+                          <div className="flex gap-1">
+                            <span className="text-white/60 w-16 md:w-20 shrink-0">Region:</span>
+                            <span className="text-white/90 truncate">ASHANTI REGION</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Right Block: Photo (Span 4) */}
+                      <div className="col-span-4 flex justify-end h-full">
+                        <div className="relative w-18 h-22 md:w-24 md:h-28 bg-[#fafbfa] rounded-lg p-[3px] shadow-lg border border-white/20 overflow-hidden self-center group-hover/cardContainer:scale-[1.03] transition-transform duration-500">
+                          <div className="w-full h-full bg-slate-100 rounded-md overflow-hidden relative">
+                            <img
+                              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200"
+                              alt="Osaah Hannet (Verified Member)"
+                              className="w-full h-full object-cover object-top"
+                              referrerPolicy="no-referrer"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                          </div>
+                          
+                          {/* Checked Validation badge */}
+                          <div className="absolute bottom-1 right-1 bg-[#006B3C] text-white p-0.5 rounded-full shadow border border-white">
+                            <svg viewBox="0 0 20 20" fill="currentColor" className="w-2 md:w-2.5 h-2 md:h-2.5">
+                              <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Bottom Edge Colored Banner Stripe of the NDC */}
+                    <div className="h-1.5 md:h-2 w-full flex rounded-sm overflow-hidden mt-1 md:mt-2 relative z-10 shadow-inner">
+                      <div className="bg-[#CE1126] flex-1"></div>
+                      <div className="bg-[#ffffff] flex-1"></div>
+                      <div className="bg-[#000000] flex-1"></div>
+                      <div className="bg-[#006B3C] flex-1"></div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Micro/Small Feature Indicators */}
+                <div className="flex flex-wrap gap-2 md:gap-3 justify-center mt-6 md:mt-8 w-full">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#006B3C]/5 border border-[#006B3C]/10 text-[#006B3C] text-[10px] md:text-[11px] font-bold uppercase tracking-wider rounded-[1px]">
+                    <ShieldCheck className="w-3.5 h-3.5 text-[#006B3C]" />
+                    Official Party Identification
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#006B3C]/5 border border-[#006B3C]/10 text-[#006B3C] text-[10px] md:text-[11px] font-bold uppercase tracking-wider rounded-[1px]">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#006B3C]" />
+                    Verified Membership
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#006B3C]/5 border border-[#006B3C]/10 text-[#006B3C] text-[10px] md:text-[11px] font-bold uppercase tracking-wider rounded-[1px]">
+                    <Award className="w-3.5 h-3.5 text-[#006B3C]" />
+                    National Recognition
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* NDC Party Dues Payment Section */}
+      <DuesPaymentSection />
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-surface-white border-b border-outline-variant/10">
         <div className="max-w-5xl mx-auto text-center">
           <div className="inline-block px-3 py-1 bg-surface-container rounded-[1px] text-xs text-on-surface-variant font-semibold uppercase mb-3">
